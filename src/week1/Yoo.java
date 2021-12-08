@@ -30,6 +30,7 @@ public class Yoo {
     }
 
     //ATM
+    //array vs list
     //https://www.acmicpc.net/problem/11399
     public void problem11399() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -161,7 +162,7 @@ public class Yoo {
 
     public void solution2() {
         String p = "PM 01:00:00";
-        int n = 15000; //2만 이하
+        int n = 62; //2만 이하
 
         String answer = "";
 
