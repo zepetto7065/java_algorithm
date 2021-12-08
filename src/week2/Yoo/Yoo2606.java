@@ -1,4 +1,4 @@
-package week2;
+package week2.Yoo;
 
 import java.io.BufferedReader;
 import java.io.IOException;

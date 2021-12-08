@@ -1,4 +1,4 @@
-package week2;
+package week2.Yoo;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,7 +18,7 @@ public class Yoo1260 {
     public static void main(String[] args) {
         System.out.println("main");
     }
-    
+
     //메모리21420kb 시간304ms
     public void problem1260() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
