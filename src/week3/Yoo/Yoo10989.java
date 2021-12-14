@@ -5,21 +5,31 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Yoo10989 {
+    //O(n^2) 계수정렬
+    //4840496KB 1700ms
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        int[] numbers = new int[n];
+        //        int[] numbers = new int[n];
+        int[] cnt = new int[10001];
 
         for (int i = 0; i < n; i++) {
-            int num = Integer.parseInt(br.readLine());
-            numbers[i] = num;
+            cnt[Integer.parseInt(br.readLine())]++;
         }
+        //509972KB 2400ms
+        //        Arrays.sort(numbers); //dual-pivot Quick sort
 
-        sort(numbers);
-
-        for (int num : numbers) {
-            System.out.println(num);
+        StringBuilder sb = new StringBuilder();
+        //        for (int num : numbers) {
+        //            sb.append(num).append('\n');
+        //        }
+        for (int i = 1; i < 10001; i++) {
+            while (cnt[i] > 0) {
+                sb.append(i).append('\n');
+                cnt[i]--;
+            }
         }
+        System.out.println(sb);
     }
 
     private static void sort(int[] numbers) {
