@@ -19,6 +19,7 @@ public class Yoo11651 {
             array[i][1] = Integer.parseInt(st.nextToken());
         }
 
+
         Arrays.sort(array, (o1, o2) -> {
             if (o1[1] == o2[1]) {
                 return Integer.compare(o1[0], o2[0]); //y좌표기준으로 정렬
