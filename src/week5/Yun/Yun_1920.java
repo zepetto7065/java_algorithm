@@ -3,7 +3,7 @@ package week5.Yun;
 import java.util.Arrays;
 import java.util.Scanner;
 
-//191880	2096
+// 186876	2032
 
 public class Yun_1920 {
     public static void main(String[] args) {
@@ -11,18 +11,20 @@ public class Yun_1920 {
 
         int n = scanner.nextInt();
         int[] array = new int[n];
-        for (int i = 0; i < n; i++) {
-            array[i] = scanner.nextInt();
-        }
+        setArray(scanner, n, array);
 
         Arrays.sort(array);
 
         int m = scanner.nextInt();
         int[] elements = new int[m];
-        for (int i = 0; i < m; i++) {
-            elements[i] = scanner.nextInt();
-        }
+        setElements(scanner, m, elements);
 
+        print(array, elements);
+
+
+    }
+
+    private static void print(int[] array, int[] elements) {
         for (int element : elements) {
             if (checkArrayHasElement(array, element)) {
                 System.out.println(1);
@@ -30,8 +32,18 @@ public class Yun_1920 {
                 System.out.println(0);
             }
         }
+    }
 
+    private static void setElements(Scanner scanner, int m, int[] elements) {
+        for (int i = 0; i < m; i++) {
+            elements[i] = scanner.nextInt();
+        }
+    }
 
+    private static void setArray(Scanner scanner, int n, int[] array) {
+        for (int i = 0; i < n; i++) {
+            array[i] = scanner.nextInt();
+        }
     }
 
     static boolean checkArrayHasElement(int[] array, int element) {
