@@ -4,7 +4,7 @@ public class Yun_newIdRecommendation {
     public String solution(String new_id) {
         new_id = new_id.toLowerCase();
 
-        new_id = new_id.replaceAll("[^a-z\\d\\-_.]*", "");
+        new_id = new_id.replaceAll("[^a-z\\d-_.]*", "");
 
         new_id = new_id.replaceAll("\\.{2,}", ".");
 
