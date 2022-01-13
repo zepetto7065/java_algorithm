@@ -44,9 +44,9 @@ public class Shin_신규아이디추천 {
         if (answer.endsWith(".")) {
             answer = answer.substring(0, answer.length() - 1);
         }
-        if (answer.isBlank()) {
-            answer = "a";
-        }
+//        if (answer.isBlank()) {
+//            answer = "a";
+//        }
         if (answer.length() >= 16) {
             answer = answer.substring(0, 15);
         }
