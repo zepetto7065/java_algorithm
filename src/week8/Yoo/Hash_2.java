@@ -1,11 +1,10 @@
 package week8.Yoo;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 //전화번호 목록
-public class hash_2 {
+public class Hash_2 {
     public static void main(String[] args) {
         String[] phone_book = new String[]{"123", "456", "789"};
         System.out.println(solution(phone_book));

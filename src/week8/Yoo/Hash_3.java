@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 //위장
-public class hash_3 {
+public class Hash_3 {
     public static void main(String[] args) {
         String[][] clothes = new String[][]{{"yellowhat", "headgear"}, {"bluesunglasses", "eyewear"}, {"green_turban", "headgear"}};
         System.out.println(solution(clothes));
