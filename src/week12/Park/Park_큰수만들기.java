@@ -1,34 +1,36 @@
-package week12.park;
+package week12.Park;
 
-public class Park_조이스틱 {
+public class Park_큰수만들기 {
 
     public static void main(String[] args) {
-        System.out.println(solution("JEROEN"));
+        System.out.println(solution("1924", 2));
     }
 
-    public static int solution(String name) {
-        int answer = 0;
-        int length = name.length();
+    /**
+     * [문제]
+     * 어떤 숫자에서 k개의 수를 제거했을 때 얻을 수 있는 가장 큰 숫자를 구하려 합니다.
+     * [제한사항]
+     * number 는 1자리 이상, 1,000,000자리 이하인 숫자입니다.
+     * k는 1 이상 number 의 자릿수 미만인 자연수입니다.
+     **/
 
-        int index; // 다음 값들을 확인할 때 사용
-        int move = length - 1; // 좌우 움직임 수를 체크
+    public static String solution(String number, int k) {
+        StringBuilder answer = new StringBuilder();
+        int index = 0;
 
-        for(int i = 0; i < name.length(); i++){
-            answer += Math.min(name.charAt(i) - 'A', 'Z' - name.charAt(i) + 1);
+        for (int i = 0; i < number.length() - k; i++) {
+            char maxNum = '0';
+            for (int j = index; j <= k + i; j++) {
 
-            index = i + 1;
-            // 연속되는 A 갯수 확인
-            while(index < length && name.charAt(index) == 'A'){
-                index++;
+                // 현재값보다 큰값이 있는지 비교후 가장 큰값을 더해줌
+                if (maxNum < number.charAt(j)) {
+                    maxNum = number.charAt(j);
+                    index = j + 1; // 다음 자리수로 이동
+                }
             }
-
-            // 순서대로 가는 것과, 뒤로 돌아가는 것 중 이동수가 적은 것을 선택
-            move = Math.min(move, i * 2 + length - index);
-            // 2022년 이전 테스트 케이스만 확인하면 여기까지해도 정답처리가 되기 때문에, 이전 정답들에는 여기까지만 정리되어 있지만,
-            // BBBBAAAAAAAB 와 같이, 처음부터 뒷부분을 먼저 입력하는 것이 더 빠른 경우까지 고려하려면 아래의 코드가 필요합니다.
-            move = Math.min(move, (length - index) * 2 + i);
+            answer.append(maxNum);
         }
-        return answer + move;
+        return answer.toString();
     }
 
 
