@@ -1,5 +1,4 @@
-package week11;
-
+package week11.Yun;
 import java.util.Arrays;
 
 public class Yun_H_Index {
