@@ -23,7 +23,7 @@ public class bemin2 {
             String[] nameValue = words[0].split("[.]");
 
             String extension = nameValue[nameValue.length-1];
-            String flag = "";
+            String flag;
             //확장자 구하기
             if("mp3".equals(extension) || "aac".equals(extension) || "flac".equals(extension)){
                 flag = "music";
@@ -42,10 +42,10 @@ public class bemin2 {
 
         //출력
         StringBuilder sb = new StringBuilder();
-        sb.append("music " + map.get("music")+"b\n")
-                .append("images " + map.get("images")+"b\n")
-                .append("movies " + map.get("movies")+"b\n")
-                .append("other " + map.get("other")+"b");
+        sb.append("music ").append(map.get("music")).append("b\n")
+                .append("images ").append(map.get("images")).append("b\n")
+                .append("movies ").append(map.get("movies")).append("b\n")
+                .append("other ").append(map.get("other")).append("b");
 
         return sb.toString();
     }

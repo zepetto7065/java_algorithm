@@ -4,7 +4,8 @@ import java.util.*;
 
 public class Mobi {
     public static void main(String[] args) {
-        solution("John Doe, Peter Parker, Mary Jane Watson-Parker, James Doe, John Elvis Doe, Jane Doe, Penny Parker", "example");
+        String example = solution("John Doe, Peter Parker, Mary Jane Watson-Parker, James Doe, John Elvis Doe, Jane Doe, Penny Parker", "example");
+        System.out.println("example = " + example);
     }
 
     private static String solution(String S, String C) {
@@ -14,13 +15,10 @@ public class Mobi {
 
         for (String name : names) {
             StringBuilder sb = nameParser(name);
-
             //중복확인
             duplicationCheck(countMap, sb);
-
             //이메일 형태 만들기
             sb.append("@").append(C.toLowerCase()).append(".com");
-
             target.add(sb.toString());
         }
 

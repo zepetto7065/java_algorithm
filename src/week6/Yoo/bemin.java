@@ -4,7 +4,6 @@ public class bemin {
     public static void main(String[] args) {
         int[] c = new int[]{2,2,1,1,0,1};
         System.out.println(solution(3,3, c));
-
     }
 
     private static String solution(int U, int L, int[] C) {
@@ -14,7 +13,8 @@ public class bemin {
             if(C[i] == 0){
                 matrix[i][0] = 0;
                 matrix[i][1] = 0;
-            }else if(C[i] == 2){
+            }
+            if(C[i] == 2){
                 matrix[i][0] = 1;
                 matrix[i][1] = 1;
                 U -= 1;
@@ -27,7 +27,8 @@ public class bemin {
                 if(U > 0){
                     matrix[i][0] = 1;
                     U -= 1;
-                }else if(L > 0){
+                }
+                if(L > 0){
                     matrix[i][1] = 1;
                     L -= 1;
                 }

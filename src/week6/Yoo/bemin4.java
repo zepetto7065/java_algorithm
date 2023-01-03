@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class bemin4 {
     public static void main(String[] args) {
-        int[] A = new int[]{1,3,2,1};
-        int[] B = new int[]{4,2,5,3,2};
+        int[] A = new int[]{2,1,3,4,2,1};
+        int[] B = new int[]{3,3,1};
 
         System.out.println(solution(A,B));
     }
@@ -16,7 +16,7 @@ public class bemin4 {
         Arrays.sort(A);
         Arrays.sort(B);
         int i = 0;
-        for (int k = 0; k < n; k++) {
+        for (int k = 0; k < n - 1; k++) {
             if (i < m - 1 && B[i] < A[k])
                 i += 1;
             if (A[k] == B[i])
